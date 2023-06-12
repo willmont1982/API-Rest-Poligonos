@@ -1,0 +1,27 @@
+{
+  "arquivo1.csv": {
+    "Polígono 1": {
+      "Número de lados": 3,
+      "Perímetro": 7.23606797749979,
+      "Área": 1.5,
+      "Número de diagonais": 0.0,
+      "Soma dos ângulos internos": 180
+    },
+    "Polígono 2": {
+      "Número de lados": 4,
+      "Perímetro": 4.0,
+      "Área": 1.0,
+      "Número de diagonais": 2.0,
+      "Soma dos ângulos internos": 360
+    }
+  },
+  "arquivo2.csv": {
+    "Polígono 1": {
+      "Número de lados": 5,
+      "Perímetro": 4.47213595499958,
+      "Área": 0.5,
+      "Número de diagonais": 5.0,
+      "Soma dos ângulos internos": 540
+    }
+  }
+}
