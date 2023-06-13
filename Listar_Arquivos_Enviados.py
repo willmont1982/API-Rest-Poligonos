@@ -1,3 +1,8 @@
+#A função montar_json_poligonos recebe como parâmetro um dicionário poligonos com a estrutura de dados dos polígonos, onde as chaves do primeiro nível são os nomes dos arquivos e as chaves do segundo nível são os nomes dos polígonos.
+
+#A função percorre o dicionário poligonos e cria um dicionário com os dados dos polígonos e suas métricas para cada arquivo. Em seguida, converte o dicionário em um formato JSON usando json.dumps() e retorna o JSON resultante.
+
+
 import json
 from shapely.geometry import Polygon
 
@@ -30,11 +35,10 @@ def montar_json_poligonos(poligonos):
 
     return json.dumps(dados_json, indent=4)
 
-#A função montar_json_poligonos recebe como parâmetro um dicionário poligonos com a estrutura de dados dos polígonos, onde as chaves do primeiro nível são os nomes dos arquivos e as chaves do segundo nível são os nomes dos polígonos.
-
-#A função percorre o dicionário poligonos e cria um dicionário com os dados dos polígonos e suas métricas para cada arquivo. Em seguida, converte o dicionário em um formato JSON usando json.dumps() e retorna o JSON resultante.
-
 #Para utilizar essa função, você pode chamar o seguinte código:
+
+#A função `montar_json_poligonos` irá retornar uma string contendo o JSON com a listagem dos arquivos, polígonos e suas métricas correspondentes. 
+#Em seguida, o código imprime o JSON resultante na tela.
 
 poligonos = {
     'arquivo1.csv': {
@@ -49,5 +53,3 @@ poligonos = {
 json_resultante = montar_json_poligonos(poligonos)
 print(json_resultante)
 
-#A função `montar_json_poligonos` irá retornar uma string contendo o JSON com a listagem dos arquivos, polígonos e suas métricas correspondentes. 
-#Em seguida, o código imprime o JSON resultante na tela.
