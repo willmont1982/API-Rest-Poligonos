@@ -1,3 +1,13 @@
+#Envio de um arquivo CSV contendo as coordenadas dos pontos dos polígonos através de uma solicitação POST para a rota /upload.
+#Certificar de que o arquivo CSV esteja incluído na solicitação como um campo file.
+#Os pontos devem estar nas colunas 'X' e 'Y', o nome do polígono deve estar na coluna 'Nome' e a ordem do ponto na sequência do polígono deve estar na coluna 'Ordem'.
+#Os polígonos serão processados e armazenados em memória para posterior análise.
+#Listagem de arquivos e polígonos:
+
+#Obter a lista de arquivos enviados através de uma solicitação GET para a rota /arquivos.
+#Para cada arquivo, obter a lista de polígonos presentes através de uma solicitação GET para a rota /poligonos/<arquivo>, onde <arquivo> é o nome do arquivo desejado.
+#Para cada polígono, serão exibidas as seguintes métricas: número de lados, perímetro, área, número de diagonais e soma dos ângulos internos.
+
 from flask import Flask, request, jsonify
 import csv
 import math
@@ -84,14 +94,4 @@ def listar_poligonos(nome_arquivo):
     else:
         return jsonify({'error': 'Arquivo não encontrado'}), 404
     
-    Upload de arquivo CSV:
-
-#Você pode enviar um arquivo CSV contendo as coordenadas dos pontos dos polígonos através de uma solicitação POST para a rota /upload.
-#Certifique-se de que o arquivo CSV esteja incluído na solicitação como um campo file.
-#Os pontos devem estar nas colunas 'X' e 'Y', o nome do polígono deve estar na coluna 'Nome' e a ordem do ponto na sequência do polígono deve estar na coluna 'Ordem'.
-#Os polígonos serão processados e armazenados em memória para posterior análise.
-#Listagem de arquivos e polígonos:
-
-#Você pode obter a lista de arquivos enviados através de uma solicitação GET para a rota /arquivos.
-#Para cada arquivo, você pode obter a lista de polígonos presentes através de uma solicitação GET para a rota /poligonos/<arquivo>, onde <arquivo> é o nome do arquivo desejado.
-#Para cada polígono, serão exibidas as seguintes métricas: número de lados, perímetro, área, número de diagonais e soma dos ângulos internos.
+   
