@@ -1,3 +1,7 @@
+#Adicionar as importações necessárias e criar uma figura (fig) e um eixo (ax) utilizando o Matplotlib. 
+#A cada iteração na rota /listagem, criamos um patch (PolygonPatch) para cada polígono e o adicionar ao eixo ax. 
+#Por fim, chamar plt.show() para exibir o gráfico com os polígonos desenhados.
+
 from flask import Flask, request, jsonify
 from shapely.geometry import Polygon
 import csv
@@ -86,6 +90,3 @@ def listagem_poligonos():
 if __name__ == '__main__':
     app.run()
 
-#Adicionamos as importações necessárias e criamos uma figura (fig) e um eixo (ax) utilizando o Matplotlib. 
-#A cada iteração na rota /listagem, criamos um patch (PolygonPatch) para cada polígono e o adicionamos ao eixo ax. 
-#Por fim, chamamos plt.show() para exibir o gráfico com os polígonos desenhados.
