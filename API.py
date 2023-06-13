@@ -1,3 +1,13 @@
+#Aqui estão as principais características desta API:
+
+#Cadastro de Polígono:
+#Para cadastrar um polígono, enviar uma solicitação POST para a rota /poligonos com os dados do polígono em formato JSON. 
+#Os dados devem incluir um nome e uma lista de pontos que representam as coordenadas X e Y de cada vértice do polígono.
+
+#Extração de Métricas:
+#Para obter as métricas de um polígono cadastrado, enviar uma solicitação GET para a rota /poligonos/<nome>, onde <nome> é o nome do polígono desejado. 
+#As métricas retornadas incluem o número de lados, o perímetro, a área, o número de diagonais e a soma dos ângulos internos do polígono.
+
 from flask import Flask, request, jsonify
 from shapely.geometry import Polygon
 
@@ -46,12 +56,3 @@ def obter_poligono(nome):
 
 if __name__ == '__main__':
     app.run()
-
-#Aqui estão as principais características desta API:
-
-#Cadastro de Polígono:
-
-#Para cadastrar um polígono, você deve enviar uma solicitação POST para a rota /poligonos com os dados do polígono em formato JSON. Os dados devem incluir um nome e uma lista de pontos que representam as coordenadas X e Y de cada vértice do polígono.
-#Extração de Métricas:
-
-#Para obter as métricas de um polígono cadastrado, você deve enviar uma solicitação GET para a rota /poligonos/<nome>, onde <nome> é o nome do polígono desejado. As métricas retornadas incluem o número de lados, o perímetro, a área, o número de diagonais e a soma dos ângulos internos do polígono.
